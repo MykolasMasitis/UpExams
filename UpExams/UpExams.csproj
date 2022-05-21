@@ -94,5 +94,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Logo\SKPO.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Logo\CATGRY.ICO" />
+    <Resource Include="Images\Logo\IKAR.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Logo\CROSS.ICO" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
