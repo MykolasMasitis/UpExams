@@ -5,10 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UpExams"
         mc:Ignorable="d"
+        x:Name="AppWindow"
         WindowStyle="None"
         AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
         Icon="Images\Logo\skpo.ico"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" 
+        Height="600" 
+        Width="900">
+    <WindowChrome.WindowChrome>
+        <WindowChrome />
+    </WindowChrome.WindowChrome>
     <Grid>
         
     </Grid>
