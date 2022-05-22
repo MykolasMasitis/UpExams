@@ -49,6 +49,11 @@ namespace UpExams
         public double WindowMinimumWidth { get; set; } = 400;
         public double WindowMinimumHeight { get; set; } = 300;
         public Thickness InnerContentPadding { get { return new Thickness(6); } }
+        /// <summary>
+        /// The current page of the application
+        /// </summary>
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.MainPage;
+
         #endregion
 
         #region Commands

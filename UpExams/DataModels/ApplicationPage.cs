@@ -11,7 +11,7 @@
         MainPage = 0,
 
         /// <summary>
-        /// The logint page
+        /// The login page
         /// </summary>
         Login = 1,
 
