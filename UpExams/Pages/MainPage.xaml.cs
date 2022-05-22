@@ -18,11 +18,12 @@ namespace UpExams
     /// <summary>
     /// Логика взаимодействия для MainPage.xaml
     /// </summary>
-    public partial class MainPage : Page
+    public partial class MainPage : BasePage
     {
         public MainPage()
         {
             InitializeComponent();
+
         }
     }
 }

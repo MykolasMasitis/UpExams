@@ -71,9 +71,22 @@
                                         </Button>
                                         
                                         <!--Title-->
-                                        <Viewbox Grid.Column="1" Margin="0">
-                                            <TextBlock Style="{StaticResource HeaderText}" 
-                                                       Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title}" />
+                                        <Viewbox Grid.Column="0" Grid.ColumnSpan="3" Margin="5">
+                                            <!--<TextBlock Style="{StaticResource HeaderText}" 
+                                                       Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title}" />-->
+                                            <StackPanel>
+                                                <TextBlock 
+                                                    FontFamily="{StaticResource LatoThin}" 
+                                                    FontSize="{StaticResource FontSizeRegular}"
+                                                    TextAlignment="Center">
+                                                    <Run Text="О" Foreground="{StaticResource WordOrangeBrush}"/><Run Text="М" Foreground="{StaticResource WordBlueBrush}"/><Run Text="С" Foreground="{StaticResource WordGreenBrush}"/>
+                                                </TextBlock>
+                                                <TextBlock Text="by Mike Ruby" 
+                                                           FontFamily="{StaticResource LatoThin}"
+                                                           FontSize="{StaticResource FontSizeSmall}"
+                                                           TextAlignment="Center"
+                                                           />
+                                            </StackPanel>
                                         </Viewbox>
                                         
                                         <!--Windows button-->
@@ -131,6 +144,6 @@
     </WindowChrome.WindowChrome>
     
     <Grid Background="{StaticResource ForegroundLightBrush}">
-        <Frame x:Name="MainFrame" Content="{Binding CurrentPage}"/>
+        <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
     </Grid>
 </Window>
