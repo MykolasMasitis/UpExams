@@ -131,6 +131,6 @@
     </WindowChrome.WindowChrome>
     
     <Grid Background="{StaticResource ForegroundLightBrush}">
-        <TextBlock Text="Hello!" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Frame x:Name="MainFrame" Content="{Binding CurrentPage}"/>
     </Grid>
 </Window>
