@@ -27,7 +27,7 @@ namespace UpExams
         #region Command Helpers
         /// <summary>
         /// Runs a command if the updating flag is not set
-        /// If the flag is true (indicating the function is already running) then the action will not run.
+        /// If the flag is true (indicating the function is already running) then the action will not run. 
         /// </summary>
         /// <param name="updatingFlag">The boolean property flag defining if the the command is already running</param>
         /// <param name="action">The action to run if the command is not already running</param>
