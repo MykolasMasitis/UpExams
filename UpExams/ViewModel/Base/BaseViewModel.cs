@@ -2,6 +2,7 @@
 using System;
 using System.ComponentModel;
 using System.Linq.Expressions;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace UpExams
@@ -33,6 +34,21 @@ namespace UpExams
         /// <returns></returns>
         protected async Task RunCommand(Expression<Func<bool>> updatingFlag, Func<Task> action)
         {
+            // Check if the flag property is true (meaning the function is already running)
+            if (updatingFlag.GetPropertyValue())
+                return;
+
+            // Set the property flag to true to indicate we are running
+            updatingFlag.SetPropertyValue(true);
+
+            try
+            {
+                await action();
+            }
+            finally
+            {
+                updatingFlag.SetPropertyValue(false);
+            }
 
         }
         #endregion
