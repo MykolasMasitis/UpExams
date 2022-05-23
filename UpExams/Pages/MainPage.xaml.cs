@@ -18,7 +18,7 @@ namespace UpExams
     /// <summary>
     /// Логика взаимодействия для MainPage.xaml
     /// </summary>
-    public partial class MainPage : BasePage
+    public partial class MainPage : BasePage<MainPageViewModel>
     {
         public MainPage()
         {

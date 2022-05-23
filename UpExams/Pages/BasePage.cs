@@ -10,14 +10,14 @@ namespace UpExams
     /// <summary>
     /// The base page for all pages to gain base functionality
     /// </summary>
-    public class BasePage : Page
+    public class BasePage<VM> : Page where VM : BaseViewModel, new()
     {
         #region Private Member
 
         /// <summary>
         /// The View Model associated with this page
         /// </summary>
-        private object mViewModel;
+        private VM mViewModel;
 
         #endregion
 
@@ -45,12 +45,12 @@ namespace UpExams
         public bool ShouldAnimateOut { get; set; }
 
         /// <summary>
-        /// The View Model associated with this page
+        /// The view model assosiated with this page
         /// </summary>
-        public object ViewModelObject
-        {
-            get => mViewModel;
-            set
+        public VM ViewModel 
+        { 
+            get { return mViewModel; } 
+            set 
             {
                 // If nothing has changed, return
                 if (mViewModel == value)
@@ -86,6 +86,9 @@ namespace UpExams
 
             // Listen out for the page loading
             Loaded += BasePage_LoadedAsync;
+
+            // Создадим view model по умолчанию
+            this.ViewModel = new VM();
         }
 
         #endregion

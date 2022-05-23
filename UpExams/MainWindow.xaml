@@ -119,7 +119,7 @@
                                     </Border>
                                     
                                     <!--Page content-->
-                                    <Border Grid.Row="2" Padding="{Binding InnerContentPadding}">
+                                    <Border Grid.Row="2">
                                         <ContentPresenter Content="{TemplateBinding Content}"/>
                                     </Border>
 

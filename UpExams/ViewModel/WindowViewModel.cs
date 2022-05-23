@@ -44,7 +44,7 @@ namespace UpExams
             }
         }
         public CornerRadius WindowCornerRadius { get { return new CornerRadius(WindowRadius); } }
-        public int TitleHeight { get; set; } = 42;
+        public int TitleHeight { get; set; } = 32;
         public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight + ResizeBorder); } }
         public double WindowMinimumWidth { get; set; } = 400;
         public double WindowMinimumHeight { get; set; } = 300;
