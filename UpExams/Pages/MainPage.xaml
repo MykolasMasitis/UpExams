@@ -10,15 +10,22 @@
 
     <Border Background="{StaticResource WordBlueBrush}">
         <Grid>
-            <Grid.Background>
-                <ImageBrush TileMode="FlipXY" ViewboxUnits="Absolute" Viewbox="0 0 4000 2000" 
-                            ImageSource="/Images/Backgrounds/medical-team.png"/>
-            </Grid.Background>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Здесь будет перечень экспертиз в зависимости от выбранного файла в side menu-->
+            <Border Grid.Column="1">
+                <Border.Background>
+                    <ImageBrush TileMode="FlipXY" ViewboxUnits="Absolute" Viewbox="0 0 4000 2500" 
+                            ImageSource="/Images/Backgrounds/medical-team.png"/>
+                </Border.Background>
+            </Border>
+
+            <local:SideMenuControl>
+            </local:SideMenuControl>
 
         </Grid>
     </Border>
