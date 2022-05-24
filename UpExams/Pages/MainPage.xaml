@@ -25,6 +25,7 @@
             </Border>
 
             <local:SideMenuControl>
+                <local:FilesListControl/>
             </local:SideMenuControl>
 
         </Grid>
