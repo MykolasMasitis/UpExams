@@ -52,7 +52,7 @@ namespace UpExams
         /// <summary>
         /// The current page of the application
         /// </summary>
-        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.MainPage;
+        //public ApplicationPage CurrentPage { get; set; } = ApplicationPage.MainPage;
 
         #endregion
 

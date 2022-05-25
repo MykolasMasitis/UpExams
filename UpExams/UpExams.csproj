@@ -85,11 +85,12 @@
     </Compile>
     <Compile Include="DataModels\ApplicationPage.cs" />
     <Compile Include="Expressions\ExpressionHelpers.cs" />
-    <Compile Include="IoC\IocContainer.cs" />
+    <Compile Include="IoC\IoC.cs" />
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ValueConverters\IoCConverter.cs" />
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters\BaseValueConverter.cs" />
     <Compile Include="ValueConverters\BooleanToVisibilityConverter.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="ViewModel\Files\Design\FilesListItemDesignModel.cs" />
     <Compile Include="ViewModel\Files\FilesListItemViewModel.cs" />
     <Compile Include="ViewModel\MainPageViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="ViewModel\WindowResizer.cs" />
     <Compile Include="ViewModel\WindowViewModel.cs" />
     <Page Include="Controls\FilesListControl.xaml">

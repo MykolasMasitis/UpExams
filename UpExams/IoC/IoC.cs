@@ -10,8 +10,17 @@ namespace UpExams
     /// <summary>
     /// The IoC container for our application
     /// </summary>
-    public static class IocContainer
+    public static class IoC
     {
+        /// <summary>
+        /// Gets a service from the IoC, of the specified type
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static T Get<T>()
+        {
+            return Kernel.Get<T>();
+        }
         /// <summary>
         /// The Kernel for our IoC container
         /// </summary>
