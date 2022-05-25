@@ -13,6 +13,13 @@ namespace UpExams
     /// </summary>
     public partial class App : Application
     {
-
+        /// <summary>
+        /// Custom startup so we need to load our IoC Container
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+        }
     }
 }
