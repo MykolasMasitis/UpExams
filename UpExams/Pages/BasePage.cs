@@ -10,19 +10,9 @@ namespace UpExams
     /// <summary>
     /// The base page for all pages to gain base functionality
     /// </summary>
-    public class BasePage<VM> : Page where VM : BaseViewModel, new()
+    public class BasePage : Page
     {
-        #region Private Member
-
-        /// <summary>
-        /// The View Model associated with this page
-        /// </summary>
-        private VM mViewModel;
-
-        #endregion
-
         #region Public Properties
-
         /// <summary>
         /// The animation the play when the page is first loaded
         /// </summary>
@@ -47,30 +37,9 @@ namespace UpExams
         /// <summary>
         /// The view model assosiated with this page
         /// </summary>
-        public VM ViewModel 
-        { 
-            get { return mViewModel; } 
-            set 
-            {
-                // If nothing has changed, return
-                if (mViewModel == value)
-                    return;
-
-                // Update the value
-                mViewModel = value;
-
-                // Fire the view model changed method
-                OnViewModelChanged();
-
-                // Set the data context for this page
-                DataContext = mViewModel;
-            }
-        }
-
         #endregion
 
         #region Constructor
-
         /// <summary>
         /// Default constructor
         /// </summary>
@@ -86,15 +55,10 @@ namespace UpExams
 
             // Listen out for the page loading
             Loaded += BasePage_LoadedAsync;
-
-            // Создадим view model по умолчанию
-            this.ViewModel = new VM();
         }
-
         #endregion
 
         #region Animation Load / Unload
-
         /// <summary>
         /// Once the page is loaded, perform any required animation
         /// </summary>
@@ -128,7 +92,7 @@ namespace UpExams
 
                     // Start the animation
                     var sb = new Storyboard();
-                    
+
                     var slideAnimation = new ThicknessAnimation
                     {
                         Duration = new Duration(TimeSpan.FromSeconds(this.SlideSeconds)),
@@ -137,7 +101,7 @@ namespace UpExams
                         DecelerationRatio = 0.9f
                     };
                     Storyboard.SetTargetProperty(slideAnimation, new PropertyPath("Margin"));
-                    
+
                     var fadeAnimation = new DoubleAnimation
                     {
                         Duration = new Duration(TimeSpan.FromSeconds(this.SlideSeconds)),
@@ -145,7 +109,7 @@ namespace UpExams
                         To = 1
                     };
                     Storyboard.SetTargetProperty(fadeAnimation, new PropertyPath("Opacity"));
-                    
+
                     sb.Children.Add(slideAnimation);
                     sb.Children.Add(fadeAnimation);
 
@@ -205,7 +169,55 @@ namespace UpExams
                     break;
             }
         }
+        #endregion
 
+
+    }
+    /// <summary>
+    /// The base page with added view model support
+    /// </summary>
+    public class BasePage<VM> : BasePage where VM : BaseViewModel, new()
+    {
+        #region Private Member
+
+        /// <summary>
+        /// The View Model associated with this page
+        /// </summary>
+        private VM mViewModel;
+
+        #endregion
+
+        #region Public Properties
+        public VM ViewModel 
+        { 
+            get { return mViewModel; } 
+            set 
+            {
+                // If nothing has changed, return
+                if (mViewModel == value)
+                    return;
+
+                // Update the value
+                mViewModel = value;
+
+                // Fire the view model changed method
+                OnViewModelChanged();
+
+                // Set the data context for this page
+                DataContext = mViewModel;
+            }
+        }
+        #endregion
+
+        #region Constructor
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        public BasePage() : base()
+        {
+            // Создадим view model по умолчанию
+            this.ViewModel = new VM();
+        }
         #endregion
 
         /// <summary>

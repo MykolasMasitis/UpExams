@@ -144,6 +144,11 @@
     </WindowChrome.WindowChrome>
     
     <Grid Background="{StaticResource ForegroundLightBrush}">
-        <Frame x:Name="MainFrame" Content="{Binding ApplicationViewModel.CurrentPage, Source={x:Static local:ViewModelLocator.Instance}, Converter={local:ApplicationPageValueConverter}}"/>
+        <Frame x:Name="MainFrame" 
+               DataContext="{Binding ApplicationViewModel.CurrentPage, 
+                        Source={x:Static local:ViewModelLocator.Instance}, 
+                        Converter={local:ApplicationPageValueConverter}}"
+               d:DataContext=""
+               Content="{Binding}"/>
     </Grid>
 </Window>
