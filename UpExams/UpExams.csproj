@@ -75,7 +75,7 @@
     <Compile Include="AttachedProperties\ButtonAttachedProperty.cs" />
     <Compile Include="AttachedProperties\NoFrameHistory.cs" />
     <Compile Include="AttachedProperties\PasswordBoxAttachedProperties.cs" />
-    <Compile Include="Controls\FilesListControl.xaml.cs">
+    <Compile Include="Controls\Files\FilesListControl.xaml.cs">
       <DependentUpon>FilesListControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Files\FilesListItemControl.xaml.cs">
@@ -109,7 +109,7 @@
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="ViewModel\WindowResizer.cs" />
     <Compile Include="ViewModel\WindowViewModel.cs" />
-    <Page Include="Controls\FilesListControl.xaml">
+    <Page Include="Controls\Files\FilesListControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

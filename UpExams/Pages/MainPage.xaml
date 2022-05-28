@@ -16,17 +16,51 @@
                 <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
 
+            <!--Боковое меню-->
+            <local:SideMenuControl Grid.Column="0">
+                <local:FilesListControl/>
+            </local:SideMenuControl>
+
             <!-- Здесь будет перечень экспертиз в зависимости от выбранного файла в side menu-->
             <Border Grid.Column="1">
                 <Border.Background>
                     <ImageBrush TileMode="FlipXY" ViewboxUnits="Absolute" Viewbox="0 0 4000 2500" 
                             ImageSource="/Images/Backgrounds/medical-team.png"/>
                 </Border.Background>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <!--Title bar-->
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!--Title bar-->
+                    <Grid Height="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.ColumnSpan="2" Text="Экспертизы МО" 
+                                   Foreground="{StaticResource ForegroundLightBrush}"
+                                   FontSize="{StaticResource FontSizeRegular}"
+                                   FontFamily="{StaticResource LatoRegular}"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   />
+
+                        <StackPanel Orientation="Horizontal" Grid.Column="1">
+                            <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeCogIcon}"/>
+                            <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeCogIcon}"/>
+                            <Button Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomeCogIcon}"/>
+                        </StackPanel>
+
+                    </Grid>
+                </Grid>
             </Border>
 
-            <local:SideMenuControl>
-                <local:FilesListControl/>
-            </local:SideMenuControl>
+
 
         </Grid>
     </Border>
