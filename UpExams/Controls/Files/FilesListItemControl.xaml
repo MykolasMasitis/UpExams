@@ -24,7 +24,7 @@
 
                             <Border Grid.Column="0" Background="Red" Width="5"/>
 
-                            <Border Grid.Column="1">
+                            <Border Grid.Column="1" Padding="0 0 18 0">
                                 <StackPanel Orientation="Vertical">
                                     <TextBlock Padding="5 2 0 2" FontFamily="{StaticResource LatoRegular}" 
                                                Text="{Binding lpuid}"/>
@@ -68,6 +68,12 @@
     <ContentControl 
         Style="{StaticResource ContentStyle}" 
         d:DataContext="{x:Static local:FilesListItemDesignModel.Instance}"
-        DataContext="{x:Static local:FilesListItemDesignModel.Instance}"/>
+        DataContext="{x:Static local:FilesListItemDesignModel.Instance}">
+        
+        <!--Делаем контрол кликабельным-->
+        <ContentControl.InputBindings>
+            <MouseBinding MouseAction="LeftClick" Command="{Binding OpenMessageCommand}"/>
+        </ContentControl.InputBindings>
+    </ContentControl>
 
 </UserControl>

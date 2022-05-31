@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpExams", "UpExams\UpExams.csproj", "{703C4A8B-607B-4E3D-904C-2D8F8628B84B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foundation", "..\Common\Foundation.csproj", "{7496B6E4-C8F0-4942-8E04-35386C6A2EC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{703C4A8B-607B-4E3D-904C-2D8F8628B84B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{703C4A8B-607B-4E3D-904C-2D8F8628B84B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{703C4A8B-607B-4E3D-904C-2D8F8628B84B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7496B6E4-C8F0-4942-8E04-35386C6A2EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7496B6E4-C8F0-4942-8E04-35386C6A2EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7496B6E4-C8F0-4942-8E04-35386C6A2EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7496B6E4-C8F0-4942-8E04-35386C6A2EC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

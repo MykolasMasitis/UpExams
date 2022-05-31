@@ -38,12 +38,16 @@
             <!--Attach button-->
             <Button Grid.Column="0" 
                     Style="{StaticResource IconButton}" Content="{StaticResource FontAwesomePaperclipIcon}"
-                    Foreground="{StaticResource ForegroundDarkBrush}"/>
+                    Foreground="{StaticResource ForegroundDarkBrush}"
+                    Command="{Binding DataContext.AttachCommand, 
+                    RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:MainPage}}}"
+                    />
             
             <!--Message box-->
             <TextBox Grid.Column="1" 
                      Tag="Write a comment..."
                      FontSize="{StaticResource FontSizeRegular}"
+                     BorderThickness="0"
                      AcceptsReturn="True"
                      AcceptsTab="True"
                      />

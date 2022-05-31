@@ -33,6 +33,69 @@ namespace UpExams
                     mcod="0306121",
                     name="Детская городская поликлиника 121",
                     IsSelected=false
+                },
+                new FilesListItemViewModel
+                {
+                    lpuid=1795,
+                    mcod="0306121",
+                    name="Детская городская поликлиника 121",
+                    IsSelected=false
+                },
+                new FilesListItemViewModel
+                {
+                    lpuid=1795,
+                    mcod="0306121",
+                    name="Детская городская поликлиника 121",
+                    IsSelected=false
+                },
+                new FilesListItemViewModel
+                {
+                    lpuid=1795,
+                    mcod="0306121",
+                    name="Детская городская поликлиника 121",
+                    IsSelected=false
+                },
+                new FilesListItemViewModel
+                {
+                    lpuid=1795,
+                    mcod="0306121",
+                    name="Детская городская поликлиника 121",
+                    IsSelected=false
+                },
+                new FilesListItemViewModel
+                {
+                    lpuid=1795,
+                    mcod="0306121",
+                    name="Детская городская поликлиника 121",
+                    IsSelected=false
+                },
+                new FilesListItemViewModel
+                {
+                    lpuid=1795,
+                    mcod="0306121",
+                    name="Детская городская поликлиника 121",
+                    IsSelected=false
+                },
+                new FilesListItemViewModel
+                {
+                    lpuid=1795,
+                    mcod="0306121",
+                    name="Детская городская поликлиника 121",
+                    IsSelected=false
+                },
+                new FilesListItemViewModel
+                {
+                    lpuid=1795,
+                    mcod="0306121",
+                    name="Детская городская поликлиника 121",
+                    IsSelected=false
+                },
+                new FilesListItemViewModel
+                {
+                    lpuid=1795,
+                    mcod="0306121",
+                    name="Детская городская поликлиника 121",
+                    IsSelected=false
                 }
             };
         }
