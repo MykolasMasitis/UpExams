@@ -6,10 +6,11 @@
              xmlns:local="clr-namespace:UpExams"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid 
-        d:DataContext="{x:Static local:FilesListDesignModel.Instance}" 
-        DataContext="{x:Static local:FilesListDesignModel.Instance}" 
+    <Grid d:DataContext="{x:Static local:FilesListDesignModel.Instance}" 
         Background="{StaticResource ForegroundLightBrush}">
+        <Grid.DataContext>
+            <local:FilesListViewModel/>
+        </Grid.DataContext>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>

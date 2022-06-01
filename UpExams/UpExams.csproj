@@ -118,10 +118,10 @@
     <Compile Include="AttachedProperties\ButtonAttachedProperty.cs" />
     <Compile Include="AttachedProperties\NoFrameHistory.cs" />
     <Compile Include="AttachedProperties\PasswordBoxAttachedProperties.cs" />
-    <Compile Include="Controls\Files\FilesListControl.xaml.cs">
+    <Compile Include="Controls\FilesList\FilesListControl.xaml.cs">
       <DependentUpon>FilesListControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Files\FilesListItemControl.xaml.cs">
+    <Compile Include="Controls\FilesListItem\FilesListItemControl.xaml.cs">
       <DependentUpon>FilesListItemControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\PageHost.xaml.cs">
@@ -131,10 +131,13 @@
       <DependentUpon>SideMenuControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="CustomSections\AuthSection.cs" />
-    <Compile Include="CustomSections\SmoSection.cs" />
+    <Compile Include="CustomSections\SmoSection.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="DataModels\ApplicationPage.cs" />
     <Compile Include="Expressions\ExpressionHelpers.cs" />
     <Compile Include="IoC\IoC.cs" />
+    <Compile Include="OnLoad.cs" />
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -146,19 +149,19 @@
     <Compile Include="ViewModel\ApplicationViewModel.cs" />
     <Compile Include="ViewModel\Base\BaseViewModel.cs" />
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
-    <Compile Include="ViewModel\FilesListViewModel.cs" />
-    <Compile Include="ViewModel\Files\Design\FilesListDesignModel.cs" />
-    <Compile Include="ViewModel\Files\Design\FilesListItemDesignModel.cs" />
-    <Compile Include="ViewModel\Files\FilesListItemViewModel.cs" />
+    <Compile Include="Controls\FilesList\FilesListViewModel.cs" />
+    <Compile Include="Controls\FilesList\FilesListDesignModel.cs" />
+    <Compile Include="Controls\FilesListItem\FilesListItemDesignModel.cs" />
+    <Compile Include="Controls\FilesListItem\FilesListItemViewModel.cs" />
     <Compile Include="ViewModel\MainPageViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="ViewModel\WindowResizer.cs" />
     <Compile Include="ViewModel\WindowViewModel.cs" />
-    <Page Include="Controls\Files\FilesListControl.xaml">
+    <Page Include="Controls\FilesList\FilesListControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\Files\FilesListItemControl.xaml">
+    <Page Include="Controls\FilesListItem\FilesListItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

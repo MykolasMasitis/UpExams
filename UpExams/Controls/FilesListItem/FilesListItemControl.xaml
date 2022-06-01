@@ -65,10 +65,10 @@
         </Style>
     </UserControl.Resources>
 
-    <ContentControl 
+    <ContentControl DataContext="{Binding}"
         Style="{StaticResource ContentStyle}" 
         d:DataContext="{x:Static local:FilesListItemDesignModel.Instance}"
-        DataContext="{x:Static local:FilesListItemDesignModel.Instance}">
+        >
         
         <!--Делаем контрол кликабельным-->
         <ContentControl.InputBindings>
