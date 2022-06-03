@@ -72,7 +72,7 @@
         
         <!--Делаем контрол кликабельным-->
         <ContentControl.InputBindings>
-            <MouseBinding MouseAction="LeftClick" Command="{Binding OpenMessageCommand}"/>
+            <MouseBinding MouseAction="LeftClick" Command="{Binding ReadDataFileCommand}"/>
         </ContentControl.InputBindings>
     </ContentControl>
 

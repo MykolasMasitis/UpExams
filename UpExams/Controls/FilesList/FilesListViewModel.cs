@@ -25,7 +25,7 @@ namespace UpExams
             foreach (FileInfo datfile in files)
             {
                 int lpu_id = Int32.Parse(datfile.Name.Substring(4, 4));
-                Items.Add(new FilesListItemViewModel { lpuid = lpu_id, mcod = "Unknown", name = "Unknown", IsSelected = false });
+                Items.Add(new FilesListItemViewModel { FileName=datfile.Name, lpuid = lpu_id, mcod = "Unknown", name = "Unknown", IsSelected = false });
             }
 
         }

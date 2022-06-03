@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace UpExams
 {
-    public class FilesListDesignModel : FilesListViewModel
+    public class FilesListDesignModel
     {
+        /// <summary>
+        /// The file list items for the list
+        /// </summary>
+        public List<FilesListItemViewModel> Items { get; set; } = new List<FilesListItemViewModel>();
         public static FilesListDesignModel Instance { get { return new FilesListDesignModel(); } }
         public FilesListDesignModel()
         {

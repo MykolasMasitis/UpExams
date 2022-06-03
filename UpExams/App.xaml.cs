@@ -48,7 +48,6 @@ namespace UpExams
             // Setup IoC
             IoC.Setup();
 
-
             // Настройка и загрузка конфигурации
             qCod = ConfigurationManager.AppSettings["qCod"];
             gcPeriod = ConfigurationManager.AppSettings["period"];
