@@ -16,10 +16,15 @@
                 <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
 
-            <!--Боковое меню-->
+            <!--Контейнер-меню для спика файлов -->
             <local:SideMenuControl Grid.Column="0">
-                <local:FilesListControl/>
+                <local:FilesListControl DataContext="{Binding FilesListVM}">
+                    <!--<local:FilesListControl.DataContext>-->
+                        <!--<local:FilesListViewModel/>-->
+                    <!--</local:FilesListControl.DataContext>-->
+                </local:FilesListControl>
             </local:SideMenuControl>
+            
 
             <!-- Здесь будет перечень экспертиз в зависимости от выбранного файла в side menu-->
             <Border Grid.Column="1">
@@ -57,6 +62,14 @@
                         </StackPanel>
 
                     </Grid>
+
+                    <local:SideControl Grid.Row="1">
+                        <local:ExamsListControl DataContext="{Binding ExamsListVM}">
+                            <!--<local:ExamsListControl.DataContext>-->
+                            <!--<local:ExamsListViewModel/>-->
+                            <!--</local:ExamsListControl.DataContext>-->
+                        </local:ExamsListControl>
+                    </local:SideControl>
                 </Grid>
             </Border>
 

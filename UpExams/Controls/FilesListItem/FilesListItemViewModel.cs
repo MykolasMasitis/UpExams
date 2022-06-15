@@ -29,46 +29,46 @@ namespace UpExams
         /// </summary>
         public bool IsSelected { get; set; }
 
-        public Dictionary<string, Examination> exams = new Dictionary<string, Examination>();
+        //public Dictionary<string, Examination> exams = new Dictionary<string, Examination>();
         #endregion
 
         #region Public Commands
-        public ICommand ReadDataFileCommand { get; set; }
+        //public ICommand ReadDataFileCommand { get; set; }
         #endregion
 
         #region Constructors
         public FilesListItemViewModel()
         {
-            ReadDataFileCommand = new RelayCommand(ReadDatFile);
+            //ReadDataFileCommand = new RelayCommand(ReadDatFile);
         }
 
         #endregion
 
         #region Command Methods
-        private void ReadDatFile()
-        {
-            // IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.MainPage);
-            string fullPathToFile = Path.Combine(App.pBase, FileName);
-            BinaryFormatter formatter = new BinaryFormatter(); // Объект класса для сериализации/десериализации
-            try
-            {
-                using (FileStream fs = new FileStream(fullPathToFile, FileMode.Open, FileAccess.ReadWrite))
-                {
-                    try
-                    {
-                        // Устанавливаем свойство, с которым потом будем работать в методе Load
-                        exams = (Dictionary<string, Examination>)formatter.Deserialize(fs);
-                        MessageBox.Show(exams.Count.ToString());
-                        //exams = examFile.exams;
+        //private void ReadDatFile()
+        //{
+        //    // IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.MainPage);
+        //    string fullPathToFile = Path.Combine(App.pBase, FileName);
+        //    BinaryFormatter formatter = new BinaryFormatter(); // Объект класса для сериализации/десериализации
+        //    try
+        //    {
+        //        using (FileStream fs = new FileStream(fullPathToFile, FileMode.Open, FileAccess.ReadWrite))
+        //        {
+        //            try
+        //            {
+        //                // Устанавливаем свойство, с которым потом будем работать в методе Load
+        //                exams = (Dictionary<string, Examination>)formatter.Deserialize(fs);
+        //                MessageBox.Show(exams.Count.ToString());
+        //                //exams = examFile.exams;
 
 
-                    }
-                    catch (Exception ex) { }
-                    finally { fs.Position = 0; }
-                }
-            }
-            catch (Exception ex) { }
-        }
+        //            }
+        //            catch (Exception ex) { }
+        //            finally { fs.Position = 0; }
+        //        }
+        //    }
+        //    catch (Exception ex) { }
+        //}
         #endregion
     }
 }

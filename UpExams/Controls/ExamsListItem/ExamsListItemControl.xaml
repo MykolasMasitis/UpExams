@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="UpExams.FilesListItemControl"
+﻿<UserControl x:Class="UpExams.ExamsListItemControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -27,12 +27,12 @@
                             <Border Grid.Column="1" Padding="0 0 18 0">
                                 <StackPanel Orientation="Vertical">
                                     <TextBlock Padding="5 2 0 2" FontFamily="{StaticResource LatoRegular}" 
-                                               Text="{Binding lpuid}"/>
+                                               Text="{Binding exam.Id}"/>
                                                         <TextBlock Padding="5 0 0 2" FontFamily="{StaticResource LatoRegular}" 
-                                               Text="{Binding mcod}"/>
+                                               Text="{Binding exam.actNum}"/>
                                                         <TextBlock Padding="5 2 0 2" 
                                                FontFamily="{StaticResource LatoRegular}" 
-                                               Text="{Binding name}"
+                                               Text="{Binding exam.moId}"
                                                TextTrimming="CharacterEllipsis"/>
                                 </StackPanel>
                             </Border>
@@ -67,17 +67,11 @@
 
     <ContentControl DataContext="{Binding}"
         Style="{StaticResource ContentStyle}" 
-        d:DataContext="{x:Static local:FilesListItemDesignModel.Instance}"
-        >
+        d:DataContext="{x:Static local:ExamsListItemDesignModel.Instance}">
         
         <!--Делаем контрол кликабельным-->
         <ContentControl.InputBindings>
-            <MouseBinding MouseAction="LeftClick"
-                    Command="{Binding DataContext.ReadDataFileCommand, 
-                    RelativeSource={RelativeSource FindAncestor, 
-                                      AncestorType={x:Type local:MainPage}}}"
-                    CommandParameter="{Binding FileName}"
-                    />
+            <MouseBinding MouseAction="LeftClick" Command="{Binding}"/>
         </ContentControl.InputBindings>
     </ContentControl>
 
